@@ -26,7 +26,7 @@ class Usuarios extends Validator{
 
 //Elementos del nombre para ingresar
     public function setNombre($value){
-        if($this->validateAlphanumeric($value,1,50)){
+        if($this->validateAlphabetic($value,1,50)){
             $this->nombre = $value;
             return true;
         }else{
@@ -40,7 +40,7 @@ class Usuarios extends Validator{
 
 //Elementos del apellido para ingresar
     public function setApellido($value){
-        if($this->validateAlphanumeric($value,1,50)){
+        if($this->validateAlphabetic($value,1,50)){
             $this->apellido = $value;
             return true;
         }else{
@@ -81,7 +81,7 @@ class Usuarios extends Validator{
     }
 //Elementos del telefono para ingresar
     public function setTelefono($value){
-        if($this->validateNumeric($value,1,50)){
+        if($this->validateNumeric($value,1,8)){
             $this->telefono = $value;
             return true;
         }else{
